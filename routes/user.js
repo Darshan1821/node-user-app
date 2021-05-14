@@ -1,21 +1,21 @@
-const path = require('path');
 
 const express = require('express');
 
 const userRoutes = express.Router();
-const rootDir = require('../util/path-helper');
+
+const users = [];
 
 userRoutes.get('/user', (req, res, next) => {
-    res.sendFile(path.join(rootDir, 'views', 'add-user.html'));
+    res.render('add-user', { title : 'Add User', path : '/user' });
 });
 
 userRoutes.post('/user', (req, res, next) => {
-    console.log(req.body);
+    users.push( { username: req.body.username });
     res.redirect('/');
 });
 
 userRoutes.get('/', (req, res, next) => {
-    res.sendFile(path.join(rootDir, 'views', 'users.html'));
+    res.render('users',  { users : users, title : 'Users', path : '/'  });
 });
 
-module.exports = userRoutes;
+exports.routes = userRoutes;
