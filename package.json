@@ -1,0 +1,26 @@
+{
+  "name": "user-app",
+  "version": "1.0.0",
+  "description": "Node User App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darshan1821/node-user-app.git"
+  },
+  "author": "Darshan Bangoria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Darshan1821/node-user-app/issues"
+  },
+  "homepage": "https://github.com/Darshan1821/node-user-app#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
